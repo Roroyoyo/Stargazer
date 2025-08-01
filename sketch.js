@@ -10,7 +10,7 @@ function setup() {
   mirrorSlider.position(10, 10);
   mirrorSlider.style('width', '80px');
 
-  ColorSlider = createSlider(3, 12, 6, 1);
+  ColorSlider = createSlider(0, 225, 0, 1);
   ColorSlider.position(10, 20);
   ColorSlider.style('width', '80px');
 }
