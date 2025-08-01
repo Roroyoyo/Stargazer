@@ -10,7 +10,7 @@ function setup() {
   mirrorSlider.position(10, 10);
   mirrorSlider.style('width', '80px');
 
-  colorSlider = createSlider(3, 12, 6, 1);
+  ColorSlider = createSlider(3, 12, 6, 1);
   ColorSlider.position(10, 20);
   ColorSlider.style('width', '80px');
 }
@@ -29,7 +29,7 @@ function draw() {
     let mirrors = mirrorSlider.value();
     let angleStep = 360 / mirrors;
 
-    let colorValue = mirrorSlider.value();
+    let colorValue = ColorSlider.value();
     
     // Draw mirrored circles
     for (let angle = 0; angle < 360; angle += angleStep) {
