@@ -9,6 +9,10 @@ function setup() {
   mirrorSlider = createSlider(3, 12, 6, 1);
   mirrorSlider.position(10, 10);
   mirrorSlider.style('width', '80px');
+
+  colorSlider = createSlider(3, 12, 6, 1);
+  ColorSlider.position(10, 20);
+  ColorSlider.style('width', '80px');
 }
 
 function draw() {
@@ -24,6 +28,8 @@ function draw() {
     // Get number of mirrors from slider
     let mirrors = mirrorSlider.value();
     let angleStep = 360 / mirrors;
+
+    let colorValue = mirrorSlider.value();
     
     // Draw mirrored circles
     for (let angle = 0; angle < 360; angle += angleStep) {
@@ -32,7 +38,7 @@ function draw() {
       let x = centerX + dx * cos(angleRad) - dy * sin(angleRad);
       let y = centerY + dx * sin(angleRad) + dy * cos(angleRad);
       
-      fill(80, 0, 120, 127); // Lighter purple
+      fill(colorValue, 0, 120, 127); // Lighter purple
       noStroke();
       ellipse(x, y, 5, 5);
     }
